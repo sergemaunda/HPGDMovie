@@ -6,10 +6,46 @@
   src: url("assets/fonts/BluuNext/BluuNext-Bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: url(assets/fonts/SofiaPro/normal_normal_200.woff) format('woff2');
+}
+
 
 /*
  * Globals
  */ 
+
+ .bttn {
+  /* font-family: Sofia Pro, serif; */
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 1.5px;
+  border-radius: 30px;
+  width: 220px;
+  height: 46px;
+ }
+
+ .btn-chip {
+  border-radius: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 1.5px;
+ }
 
 
 /*
@@ -17,11 +53,13 @@
  */
 
 body {
+  background-color: #191919;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
 .cover-container {
+  background: no-repeat;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(assets/img/HPGD.jpg);
 }
 
@@ -36,7 +74,7 @@ body {
   width: 20%;
 }
 
- .header-title {
+.header-title {
   font-family: BluuNext, serif;
   font-size: 3.33333em;
   font-weight: 700;
@@ -45,17 +83,35 @@ body {
 
   padding-right: 22px;
   margin-bottom: 20px;
-  width: 800px;
- }
+}
 
- /* .header-content {
-  padding-left: 5px;
-  border-left: 3px solid #f5c518;
- } */
+.header-btn:active,
+.header-btn:hover,
+.header-btn:focus {
+  border-color: #fb8c00;
+  background-color: #fb8c00;
+  color:#fff;
+}
 
- .header-content-box {
-   padding-left: 5%;
- }
+.header-btn {
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 1.5px;
+  border-radius: 30px;
+  width: 220px;
+  height: 46px;
+  border-color: #e65100;
+  background-color: #e65100;
+  color:#fff;
+}
+
+.header-content-box {
+  padding-left: 5%;
+}
 
 .nav-masthead .nav-link {
   padding: .25rem 0;
@@ -78,3 +134,71 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
+/*
+ * Sections
+ */
+.section-header {
+  padding: 2rem 1.25rem;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* .section-about {
+  background-color: #191919;
+} */
+
+.section-about-content {
+  background-color: #1e1e1e;
+}
+
+.title-cast {
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  /* text-transform: uppercase; */
+  font-stretch: normal;
+  font-style: normal;
+  color:gray;
+}
+
+.title-about {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding-left: 1.375rem;
+  border-left: 0.1rem solid rgba(223, 124, 10, 0.8);
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/*
+ * Images
+ */
+
+.img-poster {
+  /* display: block; */
+  width: 100%;
+  max-width: 256px;
+  max-height: 419px
+}
+
+.img-cast {
+  border-radius: 50%;
+}
+
+/*
+ * Cards
+ */
+
+ .card-cast:hover {
+  background-color: #1e1e1e;
+ }
+
