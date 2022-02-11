@@ -58,6 +58,10 @@ body {
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
+a {
+  text-decoration: none;
+}
+
 /*
  * Covers
  */
@@ -74,17 +78,17 @@ body {
 
 .cover-release {
   background: no-repeat;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(assets/img/background/background_night-sky.webp);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(assets/img/background/background_stars.jpg);
 }
 
 .cover-production {
   background: no-repeat;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(assets/img/background/background_fire.webp);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(assets/img/background/background_stars_green.jpg);
 }
 
 .cover-cast {
   background: no-repeat;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(assets/img/background/background_fire.webp);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(assets/img/background/background_stars.jpg);
 }
 
 .cover-photos {
@@ -195,6 +199,10 @@ body {
   background-color: #191919;
 }
 
+.bg-section-release {
+  background-color: #1e1e1e;
+}
+
 .section-header {
   padding: 2rem 1.25rem;
   background: rgb(255, 255, 255);
@@ -204,7 +212,6 @@ body {
 .section-about-content {
   background-color: #1e1e1e;
 }
-
 
 .section-title-home {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
@@ -221,7 +228,7 @@ body {
   font-family: BluuNext, serif;
   font-size: 30px;
   font-weight: 700;
-  /* line-height: 32px; */
+  line-height: 32px;
   text-align: center;
   color: #f9f4f2;
 }
@@ -248,7 +255,10 @@ body {
  * Cards
  */
 
- .card-cast:hover {
+ .card-cast {
+  max-width: 15%;
+  border-radius: 10px;
+  margin: 20px;
   background-color: #1e1e1e;
  }
 
@@ -265,6 +275,14 @@ body {
    padding-bottom: 5%;
  }
 
+ .txt-release-bdr-top {
+  border-top: 1px solid #dcdcdc;
+ }
+
+ .txt-release-bdr-bottom {
+  border-bottom: 1px solid #dcdcdc;
+ }
+
  .title-cast {
   font-weight: 700;
   font-size: 12px;
@@ -275,7 +293,7 @@ body {
   color:gray;
 }
 
-.title-about {
+.title-home {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-weight: 800;
   text-transform: uppercase;
@@ -296,4 +314,37 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.cast-box {
+  display: flex;
+  margin: 0px auto 0;
+  width: 65%;
+  align-items: center;
+  position: relative;
+}
+
+.cast-hr {
+  background: none;
+  border-bottom: 1px solid #f9f4f2;
+  margin: 0;
+  top: -4px;
+  position: relative;
+  flex: 1 1;
+}
+
+.cast-link:hover {
+  color: #f9f4f2; 
+  border-bottom: 1px solid #f9f4f2;
+}
+
+.cast-link {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-family: Sofia Pro,serif;
+  line-height: 1em;
+  margin-left: 30px;
+  color: #f9f4f2;
+  padding-bottom: 5px;
 }
